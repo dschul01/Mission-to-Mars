@@ -9,14 +9,17 @@
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
     />
+    <link rel="stylesheet" href="static/css/style.css">
   </head>
   <body>
     <div class="container">
       <!-- Add Jumbotron to Header -->
-      <div class="jumbotron text-center">
+      <!-- Challenge 3 - Updated Jumbotron background to be red' -->
+      <div class="jumbotron text-center" style="background-color:#E83845">
         <h1>Mission to Mars</h1>
         <!-- Add a button to activate scraping script -->
-        <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
+        <!-- Challenge 3 - Updated button color to red for 'Red Planet' -->
+        <p><a class="btn btn-danger btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
       </div>
 
       <!-- Add section for Mars News -->
@@ -61,9 +64,10 @@
         </div>
 
         {% for hemisphere in mars.hemispheres %}
-        <div class="col-md-6">
+        <!-- challenge 3 - update div class to col-md-3 so hemisphere images are smaller --> 
+        <div class="col-md-3">
           <div class="thumbnail">
-            <img src="{{hemisphere.img_url | default('static/images/error.png', true)}}" alt="...">
+            <img src="{{hemisphere.img_url | default('static/images/error.png', true)}}" alt="..." class="img-thumbnail">
             <div class="caption">
               <h3>{{hemisphere.title}}</h3>
             </div>
