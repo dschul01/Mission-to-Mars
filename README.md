@@ -1,2 +1,2 @@
 # Mission-to-Mars
-Web scraping extract Mars facts and images
+Web scraping to extract Mars facts and images
